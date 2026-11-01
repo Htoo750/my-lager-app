@@ -1,4 +1,4 @@
-unzipp: Build Android APK
+zipipBuild Android APK
 on:
   workflow_dispatch:
   push:
@@ -25,7 +25,7 @@ jobs:
         run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
       - name: Extract project
         run: |
-          zipip -o Ledger_Android_App_Project_Total_Amount.zip -d extracted
+          unzip -o Ledger_Android_App_Project_Total_Amount.zip -d extracted
           cp -r extracted/app .
           cp extracted/build.gradle .
           cp extracted/settings.gradle .
